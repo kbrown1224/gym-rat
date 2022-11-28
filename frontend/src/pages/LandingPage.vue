@@ -44,14 +44,4 @@ export default defineComponent({
 .title {
   font-size: 80px;
 }
-
-.gradient-bg {
-  background: rgb(48, 71, 94);
-  background: linear-gradient(
-    45deg,
-    rgba(48, 71, 94, 1) 0%,
-    rgba(132, 20, 45, 1) 76%,
-    rgba(240, 84, 84, 1) 100%
-  );
-}
 </style>

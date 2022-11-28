@@ -1,21 +1,21 @@
 import {
   _ as t,
-  F as o,
-  Y as s,
-  G as e,
+  E as o,
+  X as s,
+  F as e,
   a,
   o as n,
   Q as r,
-} from "./index.099d1cbc.js";
+} from "./index.b5dc3681.js";
 const c = o({ name: "ErrorNotFound" }),
   l = {
     class: "fullscreen bg-blue text-white text-center q-pa-md flex flex-center",
   },
-  d = e("div", { style: { "font-size": "30vh" } }, " 404 ", -1),
+  d = e("div", { style: { "font-size": "30vh" } }, "404", -1),
   i = e(
     "div",
-    { class: "text-h2", style: { opacity: ".4" } },
-    " Oops. Nothing here... ",
+    { class: "text-h2", style: { opacity: "0.4" } },
+    "Oops. Nothing here...",
     -1
   );
 function _(p, f, u, h, x, m) {

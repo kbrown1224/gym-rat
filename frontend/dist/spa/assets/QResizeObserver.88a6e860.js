@@ -1,16 +1,16 @@
 import {
-  y as g,
-  z,
-  n as d,
-  d as y,
-  q as f,
-  s as w,
-  E as v,
+  x as g,
+  y as z,
+  m as d,
+  b as y,
+  n as f,
+  q as w,
+  D as v,
   h as R,
-  j as O,
-  u as b,
-} from "./index.099d1cbc.js";
-function x() {
+  g as x,
+  t as b,
+} from "./index.b5dc3681.js";
+function O() {
   const i = g(!z.value);
   return (
     i.value === !1 &&
@@ -20,9 +20,9 @@ function x() {
     i
   );
 }
-const m = typeof ResizeObserver != "undefined",
-  h =
-    m === !0
+const h = typeof ResizeObserver != "undefined",
+  m =
+    h === !0
       ? {}
       : {
           style:
@@ -49,8 +49,8 @@ var L = y({
           ((o = { width: e, height: n }), p("resize", o));
       }
     }
-    const { proxy: l } = O();
-    if (m === !0) {
+    const { proxy: l } = x();
+    if (h === !0) {
       let e;
       const n = (a) => {
         (t = l.$el.parentNode),
@@ -88,7 +88,7 @@ var L = y({
               n.addEventListener("resize", s, b.passive),
               u());
         };
-      const e = x();
+      const e = O();
       let n;
       return (
         d(() => {
@@ -101,10 +101,10 @@ var L = y({
         () => {
           if (e.value === !0)
             return R("object", {
-              style: h.style,
+              style: m.style,
               tabindex: -1,
               type: "text/html",
-              data: h.url,
+              data: m.url,
               "aria-hidden": "true",
               onLoad: c,
             });

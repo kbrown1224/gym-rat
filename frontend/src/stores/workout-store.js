@@ -1,18 +1,16 @@
 import { defineStore } from "pinia";
-
-function getNow() {
-  const today = new Date();
-  const date =
-    today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
-  const time =
-    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  const dateTime = date + " " + time;
-  return dateTime;
-}
+import {
+  getNextWorkout,
+  saveWorkoutPut,
+  getLastWorkouts,
+  getPastWorkouts,
+} from "src/services/backend";
 
 export const useWorkoutStore = defineStore("workout", {
   state: () => ({
     workout: null,
+    lastWorkouts: null,
+    pastWorkouts: null,
   }),
   getters: {
     setsCompleted(state) {
@@ -20,20 +18,41 @@ export const useWorkoutStore = defineStore("workout", {
         let completed = 0;
         state.workout.lifts.forEach(function (lift) {
           lift.sets.forEach(function (set) {
-            if (set.actualReps > 0) {
+            if (set.repetitions > 0) {
               completed++;
             }
           });
         });
         return completed;
+      } else {
+        return 0;
       }
-      return 0;
     },
     repsCompleted(state) {
-      return 20;
+      if (state.workout) {
+        let completed = 0;
+        state.workout.lifts.forEach(function (lift) {
+          lift.sets.forEach(function (set) {
+            completed = completed + set.repetitions;
+          });
+        });
+        return completed;
+      } else {
+        return 0;
+      }
     },
     totalWeight(state) {
-      return 200;
+      if (state.workout) {
+        let total = 0;
+        state.workout.lifts.forEach(function (lift) {
+          lift.sets.forEach(function (set) {
+            total = total + set.repetitions * set.weight;
+          });
+        });
+        return total;
+      } else {
+        return 0;
+      }
     },
     totalSets(state) {
       if (state.workout) {
@@ -50,55 +69,15 @@ export const useWorkoutStore = defineStore("workout", {
     },
   },
   actions: {
-    setStartDttm() {
-      this.workout.startDttm = getNow();
+    async saveWorkout() {
+      await saveWorkoutPut(this.workout).then((response) => {
+        if (response.status != 200) {
+          console.log(response.data.message);
+        }
+      });
     },
-    setEndDttm() {
-      this.workout.endDttm = getNow();
-    },
-    saveWorkout() {
-      console.log(this.workout);
-    },
-    getWorkout(muscleGroupId) {
-      this.workout = {
-        muscleGroupId: muscleGroupId,
-        muscleGroupName: "Chest",
-        startDttm: null,
-        endDttm: null,
-        lifts: [
-          {
-            name: "Barbell Bench",
-            sets: [
-              { rank: 1, targetReps: 5, actualReps: 0, weight: 25 },
-              { rank: 2, targetReps: 5, actualReps: 0, weight: 25 },
-              { rank: 3, targetReps: 5, actualReps: 0, weight: 25 },
-              { rank: 4, targetReps: 5, actualReps: 0, weight: 25 },
-            ],
-          },
-          {
-            name: "Dumbell Bench",
-            sets: [
-              { rank: 1, targetReps: 8, actualReps: 0, weight: 25 },
-              { rank: 2, targetReps: 8, actualReps: 0, weight: 25 },
-              { rank: 3, targetReps: 8, actualReps: 0, weight: 25 },
-            ],
-          },
-          {
-            name: "Incline Bench",
-            sets: [
-              { rank: 1, targetReps: 12, actualReps: 0, weight: 25 },
-              { rank: 2, targetReps: 12, actualReps: 0, weight: 25 },
-            ],
-          },
-          {
-            name: "Pushups",
-            sets: [
-              { rank: 1, targetReps: 15, actualReps: 0, weight: 25 },
-              { rank: 2, targetReps: 15, actualReps: 0, weight: 25 },
-            ],
-          },
-        ],
-      };
+    async getWorkout(workoutGroupId) {
+      this.workout = await getNextWorkout(workoutGroupId);
     },
   },
 });

@@ -12,5 +12,5 @@ class TokenData(BaseModel):
     first_name: str | None = None
     last_name: str | None = None
     exp: pendulum.Date | None = Field(
-        default_factory=lambda: pendulum.now().add(minutes=30)
+        default_factory=lambda: pendulum.now().add(minutes=180)
     )

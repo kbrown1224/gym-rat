@@ -12,25 +12,27 @@ from backend.config import get_settings
 settings = get_settings()
 
 
-def create_app():
+def create_app(dev: bool = False):
     """Create application factory"""
 
-    def init_routers(app: FastAPI):
+    def init_routers(app_: FastAPI):
         """Add APIRouters to main application"""
         logger.info("Initializing Routers")
 
         api_router = APIRouter()
-        api_router.include_router(auth_router, prefix="/auth")
-        api_router.include_router(workout_router, prefix="/workout")
+        api_router.include_router(auth_router)
+        api_router.include_router(workout_router)
 
-        app.include_router(api_router, prefix="/api")
-        app.include_router(ui_server.router)
+        app_.include_router(api_router, prefix="/api")
 
-    def init_mounts(app: FastAPI):
+        if not dev:
+            app_.include_router(ui_server.router)
+
+    def init_mounts(app_: FastAPI):
         """Mount static file directories"""
         logger.info("Initializing Mounts")
 
-        app.mount(
+        app_.mount(
             "/",
             StaticFiles(
                 directory="/Users/kip/Desktop/Projects/gym-rat/frontend/dist/spa"
@@ -38,13 +40,13 @@ def create_app():
             name="ui_root",
         )
 
-    def init_middleware(app: FastAPI):
+    def init_middleware(app_: FastAPI):
         """Add middlewares to application"""
         logger.info("Initializing Middleware")
 
-        app.add_middleware(middleware.TimeHeaderMiddleware)
-        app.add_middleware(middleware.VersionHeaderMiddleware)
-        app.add_middleware(
+        app_.add_middleware(middleware.TimeHeaderMiddleware)
+        app_.add_middleware(middleware.VersionHeaderMiddleware)
+        app_.add_middleware(
             CORSMiddleware,
             allow_origins=["*"],
             allow_methods=["*"],

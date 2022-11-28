@@ -27,8 +27,11 @@ class CookieSettings(BaseSettings):
 
 
 class DBSettings(BaseSettings):
-    SA_DB_URI: str = (
+    SYNC_DB_URI: str = (
         "postgresql+pg8000://svc_gym_rat:g3tSw0l3@192.168.4.37:5432/thegymrat"
+    )
+    ASYNC_DB_URI: str = (
+        "postgresql+asyncpg://svc_gym_rat:g3tSw0l3@192.168.4.37:5432/thegymrat"
     )
 
 

@@ -1,30 +1,30 @@
 import {
-  d as P,
+  b as P,
   e as T,
-  f as c,
+  d as c,
   h as u,
-  g as j,
+  f as j,
   i as A,
   p as F,
-  j as L,
+  g as L,
   l as M,
-  k as D,
-  m as O,
-  n as K,
-  q as N,
-  s as U,
-  t as V,
-  u as k,
-  v as I,
-  x as _,
-  y as m,
-  z as G,
-  A as $,
-  B as x,
-  C as J,
-  D as X,
-} from "./index.099d1cbc.js";
-import { Q as H } from "./QResizeObserver.c1066bbb.js";
+  j as K,
+  k as O,
+  m as N,
+  n as U,
+  q as V,
+  s as k,
+  t as D,
+  u as I,
+  v as _,
+  x as m,
+  y as G,
+  z as $,
+  A as x,
+  B as J,
+  C as X,
+} from "./index.b5dc3681.js";
+import { Q as H } from "./QResizeObserver.88a6e860.js";
 var oe = P({
   name: "QPageContainer",
   setup(e, { slots: p }) {
@@ -34,7 +34,7 @@ var oe = P({
       o = A(M, T);
     if (o === T)
       return console.error("QPageContainer needs to be child of QLayout"), T;
-    F(D, !0);
+    F(K, !0);
     const r = c(() => {
       const a = {};
       return (
@@ -55,7 +55,7 @@ var oe = P({
       u("div", { class: "q-page-container", style: r.value }, j(p.default));
   },
 });
-const { passive: E } = k,
+const { passive: E } = D,
   Y = ["both", "horizontal", "vertical"];
 var Z = P({
     name: "QScrollObserver",
@@ -112,7 +112,7 @@ var Z = P({
           p("scroll", { ...n });
       }
       function y() {
-        (r = V(a, e.scrollTarget)), r.addEventListener("scroll", l, E), l(!0);
+        (r = k(a, e.scrollTarget)), r.addEventListener("scroll", l, E), l(!0);
       }
       function f() {
         r !== void 0 && (r.removeEventListener("scroll", l, E), (r = void 0));
@@ -130,14 +130,14 @@ var Z = P({
       }
       const { proxy: S } = L();
       return (
-        K(() => {
+        N(() => {
           (a = S.$el.parentNode), y();
         }),
-        N(() => {
+        U(() => {
           o !== null && o(), f();
         }),
         Object.assign(S, { trigger: l, getPosition: () => n }),
-        U
+        V
       );
     },
   }),

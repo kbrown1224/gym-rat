@@ -24,6 +24,16 @@ class User(UserBase, table=True):
 class UserCreate(UserBase):
     password: str
 
+    class Config:
+        schema_extra = {
+            "example": {
+                "email": "user@example.com",
+                "firstName": "Dwayne",
+                "lastName": "Johnson",
+                "password": "G3tSw0le",
+            }
+        }
+
 
 class UserRead(UserBase):
     id: uuid.UUID

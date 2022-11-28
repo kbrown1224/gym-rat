@@ -1,18 +1,18 @@
 import {
-  d as b,
-  f as o,
+  b,
+  d as o,
   h as c,
-  g as Q,
+  f as Q,
   e as m,
-  y as p,
-  m as d,
-  q as H,
-  a5 as T,
+  x as q,
+  k as d,
+  n as H,
+  a4 as T,
   i as _,
-  j as O,
-  l as $,
-} from "./index.099d1cbc.js";
-import { Q as k } from "./QResizeObserver.c1066bbb.js";
+  g as O,
+  l as k,
+} from "./index.b5dc3681.js";
+import { Q as $ } from "./QResizeObserver.88a6e860.js";
 var L = b({
     name: "QToolbarTitle",
     props: { shrink: Boolean },
@@ -51,11 +51,11 @@ var L = b({
       const {
           proxy: { $q: v },
         } = O(),
-        a = _($, m);
+        a = _(k, m);
       if (a === m)
         return console.error("QHeader needs to be child of QLayout"), m;
-      const f = p(parseInt(t.heightHint, 10)),
-        u = p(!0),
+      const f = q(parseInt(t.heightHint, 10)),
+        u = q(!0),
         h = o(
           () =>
             t.reveal === !0 ||
@@ -68,18 +68,18 @@ var L = b({
           const e = f.value - a.scroll.value.position;
           return e > 0 ? e : 0;
         }),
-        q = o(() => t.modelValue !== !0 || (h.value === !0 && u.value !== !0)),
-        V = o(() => t.modelValue === !0 && q.value === !0 && t.reveal === !0),
+        g = o(() => t.modelValue !== !0 || (h.value === !0 && u.value !== !0)),
+        V = o(() => t.modelValue === !0 && g.value === !0 && t.reveal === !0),
         w = o(
           () =>
             "q-header q-layout__section--marginal " +
             (h.value === !0 ? "fixed" : "absolute") +
             "-top" +
             (t.bordered === !0 ? " q-header--bordered" : "") +
-            (q.value === !0 ? " q-header--hidden" : "") +
+            (g.value === !0 ? " q-header--hidden" : "") +
             (t.modelValue !== !0 ? " q-layout--prevent-focus" : "")
         ),
-        z = o(() => {
+        x = o(() => {
           const e = a.rows.value.top,
             r = {};
           return (
@@ -98,7 +98,7 @@ var L = b({
       function i(e, r) {
         e.value !== r && (e.value = r);
       }
-      function x({ height: e }) {
+      function z({ height: e }) {
         i(f, e), l("size", e);
       }
       function B(e) {
@@ -131,14 +131,14 @@ var L = b({
                 e.position - e.inflectionPoint < 100
             );
         });
-      const g = {};
+      const p = {};
       return (
-        (a.instances.header = g),
+        (a.instances.header = p),
         t.modelValue === !0 && l("size", f.value),
         l("space", t.modelValue),
         l("offset", y.value),
         H(() => {
-          a.instances.header === g &&
+          a.instances.header === p &&
             ((a.instances.header = void 0),
             l("size", 0),
             l("offset", 0),
@@ -154,8 +154,8 @@ var L = b({
                     "q-layout__shadow absolute-full overflow-hidden no-pointer-events",
                 })
               ),
-            e.push(c(k, { debounce: 0, onResize: x })),
-            c("header", { class: w.value, style: z.value, onFocusin: B }, e)
+            e.push(c($, { debounce: 0, onResize: z })),
+            c("header", { class: w.value, style: x.value, onFocusin: B }, e)
           );
         }
       );

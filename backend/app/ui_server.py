@@ -11,4 +11,4 @@ router = APIRouter(tags=["UI"])
 
 @router.get("/")
 async def get_root():
-    return FileResponse(settings.ui.DIST_DIR)
+    return FileResponse(settings.ui.DIST_DIR.joinpath("index.html"))

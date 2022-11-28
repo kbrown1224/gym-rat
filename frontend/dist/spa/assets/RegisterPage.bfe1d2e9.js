@@ -1,40 +1,40 @@
 import {
-  d as q,
-  y as v,
-  S as E,
-  T as O,
-  n as k,
-  h as A,
-  g as D,
-  j as U,
-  U as T,
-  V as F,
-  E as j,
-  W as L,
-  p as M,
-  X as $,
+  b as q,
+  x as v,
+  R as O,
+  S as D,
+  m as E,
+  h as k,
+  f as A,
+  g as U,
+  T,
+  U as F,
+  D as L,
+  V as M,
+  p as $,
+  W as j,
   _ as K,
-  f as G,
+  d as G,
   c as H,
   w as p,
   J,
   K as W,
-  o as I,
-  G as d,
-  Y as X,
-  Z as Y,
-  $ as Z,
+  o as Q,
+  F as d,
+  X,
+  Y,
+  Z,
   a as l,
-  L as Q,
+  L as I,
   N as g,
   M as z,
   Q as B,
   P as ee,
-  a0 as N,
-  H as te,
-  I as oe,
-} from "./index.099d1cbc.js";
-import { Q as ae } from "./QPage.a405a503.js";
+  $ as N,
+  G as te,
+  H as oe,
+} from "./index.b5dc3681.js";
+import { Q as ae } from "./QPage.3f5a5cd4.js";
 var se = q({
   name: "QForm",
   props: {
@@ -45,14 +45,14 @@ var se = q({
     onSubmit: Function,
   },
   emits: ["reset", "validation-success", "validation-error"],
-  setup(n, { slots: b, emit: c }) {
-    const f = U(),
+  setup(n, { slots: V, emit: c }) {
+    const m = U(),
       u = v(null);
     let a = 0;
     const s = [];
     function y(e) {
       const t = typeof e == "boolean" ? e : n.noErrorFocus !== !0,
-        V = ++a,
+        b = ++a,
         S = (o, r) => {
           c("validation-" + (o === !0 ? "success" : "error"), r);
         },
@@ -80,8 +80,8 @@ var se = q({
               )
               .catch((o) => [o])
       ).then((o) => {
-        if (o === void 0 || o.length === 0) return V === a && S(!0), !0;
-        if (V === a) {
+        if (o === void 0 || o.length === 0) return b === a && S(!0), !0;
+        if (b === a) {
           const { comp: r, err: i } = o[0];
           if ((i !== void 0 && console.error(i), S(!1, r), t === !0)) {
             const R = o.find(
@@ -102,9 +102,9 @@ var se = q({
     function h(e) {
       e !== void 0 && F(e);
       const t = a + 1;
-      y().then((V) => {
+      y().then((b) => {
         t === a &&
-          V === !0 &&
+          b === !0 &&
           (n.onSubmit !== void 0
             ? c("submit", e)
             : e !== void 0 &&
@@ -116,12 +116,12 @@ var se = q({
     function x(e) {
       e !== void 0 && F(e),
         c("reset"),
-        j(() => {
-          _(), n.autofocus === !0 && n.noResetFocus !== !0 && m();
+        L(() => {
+          _(), n.autofocus === !0 && n.noResetFocus !== !0 && f();
         });
     }
-    function m() {
-      L(() => {
+    function f() {
+      M(() => {
         if (u.value === null) return;
         const e =
           u.value.querySelector("[autofocus], [data-autofocus]") ||
@@ -132,7 +132,7 @@ var se = q({
         e != null && e.focus({ preventScroll: !0 });
       });
     }
-    M($, {
+    $(j, {
       bindComponent(e) {
         s.push(e);
       },
@@ -143,45 +143,45 @@ var se = q({
     });
     let P = !1;
     return (
-      E(() => {
+      O(() => {
         P = !0;
       }),
-      O(() => {
-        P === !0 && n.autofocus === !0 && m();
+      D(() => {
+        P === !0 && n.autofocus === !0 && f();
       }),
-      k(() => {
-        n.autofocus === !0 && m();
+      E(() => {
+        n.autofocus === !0 && f();
       }),
-      Object.assign(f.proxy, {
+      Object.assign(m.proxy, {
         validate: y,
         resetValidation: _,
         submit: h,
         reset: x,
-        focus: m,
+        focus: f,
         getValidationComponents: () => s,
       }),
       () =>
-        A(
+        k(
           "form",
           { class: "q-form", ref: u, onSubmit: h, onReset: x },
-          D(b.default)
+          A(V.default)
         )
     );
   },
 });
-const ne = (n) => (te("data-v-d54edf20"), (n = n()), oe(), n),
+const ne = (n) => (te("data-v-3181710e"), (n = n()), oe(), n),
   le = { class: "row q-mt-xl items-stretch" },
   re = { class: "col-4 offset-1" },
   ue = { class: "page-break" },
   ie = { class: "text-h6 text-bold" },
   de = { class: "col-4 offset-2" },
   ce = ne(() => d("div", { class: "text-h3" }, "Register", -1)),
-  fe = {
+  me = {
     __name: "RegisterPage",
     setup(n) {
-      const b = J(),
+      const V = J(),
         c = v(""),
-        f = v(""),
+        m = v(""),
         u = v(""),
         a = v(""),
         s = v(""),
@@ -193,15 +193,15 @@ const ne = (n) => (te("data-v-d54edf20"), (n = n()), oe(), n),
         ];
       function h() {
         (c.value = ""),
-          (f.value = ""),
+          (m.value = ""),
           (u.value = ""),
           (a.value = ""),
           (s.value = "");
       }
       const x = G(() => a.value != s.value);
-      function m() {
+      function f() {
         x.value
-          ? (b.notify({
+          ? (V.notify({
               color: "negative",
               textColor: "white",
               icon: "warning",
@@ -209,10 +209,10 @@ const ne = (n) => (te("data-v-d54edf20"), (n = n()), oe(), n),
             }),
             (a.value = ""),
             (s.value = ""))
-          : (c.value, f.value, u.value, a.value, y.push({ name: "landing" }));
+          : (c.value, m.value, u.value, a.value, y.push({ name: "landing" }));
       }
       return (P, e) => (
-        I(),
+        Q(),
         H(
           ae,
           { class: "q-py-xl gradient-bg" },
@@ -221,7 +221,7 @@ const ne = (n) => (te("data-v-d54edf20"), (n = n()), oe(), n),
               d("div", le, [
                 d("div", re, [
                   d("div", ue, [
-                    (I(),
+                    (Q(),
                     X(
                       Z,
                       null,
@@ -241,12 +241,12 @@ const ne = (n) => (te("data-v-d54edf20"), (n = n()), oe(), n),
                     { class: "glassy" },
                     {
                       default: p(() => [
-                        l(Q, null, { default: p(() => [ce]), _: 1 }),
-                        l(Q, null, {
+                        l(I, null, { default: p(() => [ce]), _: 1 }),
+                        l(I, null, {
                           default: p(() => [
                             l(
                               se,
-                              { onSubmit: m, onReset: h },
+                              { onSubmit: f, onReset: h },
                               {
                                 default: p(() => [
                                   l(
@@ -277,9 +277,9 @@ const ne = (n) => (te("data-v-d54edf20"), (n = n()), oe(), n),
                                   l(
                                     g,
                                     {
-                                      modelValue: f.value,
+                                      modelValue: m.value,
                                       "onUpdate:modelValue":
-                                        e[2] || (e[2] = (t) => (f.value = t)),
+                                        e[2] || (e[2] = (t) => (m.value = t)),
                                       hint: "Last Name",
                                     },
                                     null,
@@ -347,5 +347,5 @@ const ne = (n) => (te("data-v-d54edf20"), (n = n()), oe(), n),
       );
     },
   };
-var ge = K(fe, [["__scopeId", "data-v-d54edf20"]]);
+var ge = K(me, [["__scopeId", "data-v-3181710e"]]);
 export { ge as default };

@@ -6,17 +6,21 @@ const authStore = useAuthStore();
 
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header elevated class="bg-primary text-white">
+    <q-header elevated class="bg-primary text-white border-positive">
       <q-toolbar>
         <q-toolbar-title class="text-weight-thin">
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+            <img
+              alt="Gym Rat Logo"
+              src="~assets/logo.png"
+              style="border-color: white; width: 100%"
+            />
           </q-avatar>
           Gym Rat
         </q-toolbar-title>
         <q-space />
         <div class="text-h5 text-weight-thin">
-          {{ authStore.userData.displayName }}
+          {{ authStore.user.firstName }}
         </div>
       </q-toolbar>
     </q-header>

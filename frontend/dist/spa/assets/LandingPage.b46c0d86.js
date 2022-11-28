@@ -1,19 +1,19 @@
 import {
   _ as r,
-  F as c,
-  c as l,
-  w as i,
-  o as n,
-  G as e,
+  E as l,
+  c,
+  w as d,
+  o as i,
+  F as e,
   a as s,
   Q as o,
-  H as d,
-  I as _,
-} from "./index.099d1cbc.js";
-import { Q as p } from "./QPage.a405a503.js";
-var g = "/assets/barbel.54a478ca.svg";
-const u = c({ name: "LandigPage" }),
-  t = (a) => (d("data-v-98a53824"), (a = a()), _(), a),
+  G as n,
+  H as _,
+} from "./index.b5dc3681.js";
+import { Q as p } from "./QPage.3f5a5cd4.js";
+var g = "/assets/barbel.6079ba74.svg";
+const u = l({ name: "LandigPage" }),
+  t = (a) => (n("data-v-44a40e7d"), (a = a()), _(), a),
   f = t(() =>
     e(
       "div",
@@ -44,14 +44,14 @@ const u = c({ name: "LandigPage" }),
     )
   ),
   v = { class: "col-6 q-pr-xl flex flex-center" };
-function x(a, w, b, y, B, I) {
+function x(a, b, w, y, B, P) {
   return (
-    n(),
-    l(
+    i(),
+    c(
       p,
       { class: "gradient-bg" },
       {
-        default: i(() => [
+        default: d(() => [
           f,
           e("div", h, [
             m,
@@ -76,8 +76,8 @@ function x(a, w, b, y, B, I) {
     )
   );
 }
-var q = r(u, [
+var I = r(u, [
   ["render", x],
-  ["__scopeId", "data-v-98a53824"],
+  ["__scopeId", "data-v-44a40e7d"],
 ]);
-export { q as default };
+export { I as default };

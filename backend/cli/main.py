@@ -33,7 +33,7 @@ def generate_startup_message():
 
 
 @app.command(name="start", help="Help start")
-def start():
+def start(dev: bool = False):
     """Start the application on localhost"""
     console.print(generate_startup_message())
     console.rule("Starting Web Application")
@@ -41,6 +41,7 @@ def start():
     server = Server(
         Config(
             "backend.app.main:create_app",
+            # create_app(dev=dev),
             host=settings.server.HOST,
             port=settings.server.PORT,
             log_level=logging.getLevelName("DEBUG"),

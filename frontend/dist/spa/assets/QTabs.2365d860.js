@@ -1,34 +1,34 @@
 import {
   e as Z,
-  y as T,
-  f,
-  q as de,
-  n as xe,
+  x as T,
+  d as f,
+  n as de,
+  m as xe,
   i as Me,
-  a6 as $e,
-  a7 as Ee,
+  a5 as $e,
+  a6 as Ee,
   h,
-  a8 as be,
-  V as ce,
-  a9 as De,
-  aa as Fe,
-  ab as z,
-  D as We,
-  j as he,
-  ac as Qe,
-  ad as je,
-  d as Ve,
-  ae as p,
-  af as ve,
-  s as fe,
-  m as D,
-  S as Ke,
-  T as Oe,
-  g as ze,
-  p as He,
-} from "./index.099d1cbc.js";
-import { Q as Ne } from "./QResizeObserver.c1066bbb.js";
-import { r as Ue } from "./rtl.b51694b1.js";
+  a7 as be,
+  U as ce,
+  a8 as De,
+  a9 as Fe,
+  aa as U,
+  C as We,
+  g as he,
+  ab as Qe,
+  ac as je,
+  b as Ke,
+  ad as p,
+  ae as ve,
+  q as fe,
+  k as D,
+  R as Ve,
+  S as Oe,
+  f as Ue,
+  p as ze,
+} from "./index.b5dc3681.js";
+import { Q as He } from "./QResizeObserver.88a6e860.js";
+import { r as Ne } from "./rtl.b51694b1.js";
 let Ge = 0;
 const et = ["click", "keydown"],
   tt = {
@@ -43,17 +43,17 @@ const et = ["click", "keydown"],
     contentClass: String,
     ripple: { type: [Boolean, Object], default: !0 },
   };
-function at(t, x, _, v) {
+function at(t, x, R, v) {
   const l = Me(be, Z);
   if (l === Z)
     return (
       console.error("QTab/QRouteTab component needs to be child of QTabs"), Z
     );
-  const { proxy: H } = he(),
+  const { proxy: z } = he(),
     M = T(null),
     F = T(null),
     W = T(null),
-    N = f(() =>
+    H = f(() =>
       t.disable === !0 || t.ripple === !1
         ? !1
         : Object.assign(
@@ -62,7 +62,7 @@ function at(t, x, _, v) {
           )
     ),
     I = f(() => l.currentModel.value === t.name),
-    U = f(
+    N = f(
       () =>
         "q-tab relative-position self-stretch flex flex-center text-center" +
         (I.value === !0
@@ -109,12 +109,12 @@ function at(t, x, _, v) {
       return;
     }
     if (v === void 0) {
-      l.updateModel({ name: t.name }), _("click", r);
+      l.updateModel({ name: t.name }), R("click", r);
       return;
     }
     if (v.hasRouterLink.value === !0) {
       const w = (m = {}) => {
-        let S;
+        let k;
         const j =
           m.to === void 0 || Qe(m.to, t.to) === !0
             ? (l.avoidRouteWatcher = je())
@@ -122,28 +122,28 @@ function at(t, x, _, v) {
         return v
           .navigateToRouterLink(r, { ...m, returnRouterError: !0 })
           .catch((b) => {
-            S = b;
+            k = b;
           })
           .then((b) => {
             if (
               (j === l.avoidRouteWatcher &&
                 ((l.avoidRouteWatcher = !1),
-                S === void 0 &&
+                k === void 0 &&
                   (b === void 0 ||
                     b.message.startsWith("Avoided redundant navigation") ===
                       !0) &&
                   l.updateModel({ name: t.name })),
               m.returnRouterError === !0)
             )
-              return S !== void 0 ? Promise.reject(S) : b;
+              return k !== void 0 ? Promise.reject(k) : b;
           });
       };
-      _("click", r, w), r.defaultPrevented !== !0 && w();
+      R("click", r, w), r.defaultPrevented !== !0 && w();
       return;
     }
-    _("click", r);
+    R("click", r);
   }
-  function R(r) {
+  function _(r) {
     De(r, [13, 32])
       ? C(r, !0)
       : Fe(r) !== !0 &&
@@ -151,9 +151,9 @@ function at(t, x, _, v) {
         r.keyCode <= 40 &&
         r.altKey !== !0 &&
         r.metaKey !== !0 &&
-        l.onKbdNavigate(r.keyCode, H.$el) === !0 &&
+        l.onKbdNavigate(r.keyCode, z.$el) === !0 &&
         ce(r),
-      _("keydown", r);
+      R("keydown", r);
   }
   function $() {
     const r = l.tabProps.value.narrowIndicator,
@@ -162,13 +162,13 @@ function at(t, x, _, v) {
         ref: W,
         class: ["q-tab__indicator", l.tabProps.value.indicatorClass],
       });
-    t.icon !== void 0 && c.push(h(z, { class: "q-tab__icon", name: t.icon })),
+    t.icon !== void 0 && c.push(h(U, { class: "q-tab__icon", name: t.icon })),
       t.label !== void 0 &&
         c.push(h("div", { class: "q-tab__label" }, t.label)),
       t.alert !== !1 &&
         c.push(
           t.alertIcon !== void 0
-            ? h(z, {
+            ? h(U, {
                 class: "q-tab__alert-icon",
                 color: t.alert !== !0 ? t.alert : void 0,
                 name: t.alertIcon,
@@ -200,25 +200,25 @@ function at(t, x, _, v) {
   function Q(r, c) {
     const w = {
       ref: F,
-      class: U.value,
+      class: N.value,
       tabindex: g.value,
       role: "tab",
       "aria-selected": I.value === !0 ? "true" : "false",
       "aria-disabled": t.disable === !0 ? "true" : void 0,
       onClick: C,
-      onKeydown: R,
+      onKeydown: _,
       ...c,
     };
-    return $e(h(r, w, $()), [[Ee, N.value]]);
+    return $e(h(r, w, $()), [[Ee, H.value]]);
   }
   return { renderTab: Q, $tabs: l };
 }
-function Xe(t, x, _) {
-  const v = _ === !0 ? ["left", "right"] : ["top", "bottom"];
+function Xe(t, x, R) {
+  const v = R === !0 ? ["left", "right"] : ["top", "bottom"];
   return `absolute-${x === !0 ? v[0] : v[1]}${t ? ` text-${t}` : ""}`;
 }
 const Je = ["left", "center", "right", "justify"];
-var nt = Ve({
+var nt = Ke({
   name: "QTabs",
   props: {
     modelValue: [Number, String],
@@ -247,18 +247,18 @@ var nt = Ve({
     contentClass: String,
     "onUpdate:modelValue": [Function, Array],
   },
-  setup(t, { slots: x, emit: _ }) {
+  setup(t, { slots: x, emit: R }) {
     const { proxy: v } = he(),
       { $q: l } = v,
-      { registerTick: H } = p(),
+      { registerTick: z } = p(),
       { registerTick: M } = p(),
       { registerTick: F } = p(),
-      { registerTimeout: W, removeTimeout: N } = ve(),
-      { registerTimeout: I, removeTimeout: U } = ve(),
+      { registerTimeout: W, removeTimeout: H } = ve(),
+      { registerTimeout: I, removeTimeout: N } = ve(),
       L = T(null),
       g = T(null),
       C = T(t.modelValue),
-      R = T(!1),
+      _ = T(!1),
       $ = T(!0),
       A = T(!1),
       Q = T(!1),
@@ -266,7 +266,7 @@ var nt = Ve({
       c = [],
       w = T(0),
       m = T(!1);
-    let S,
+    let k,
       j,
       b,
       P = r.value === !0 ? te : fe;
@@ -288,13 +288,13 @@ var nt = Ve({
       Te = f(
         () =>
           `q-tabs__content--align-${
-            R.value === !0 ? "left" : Q.value === !0 ? "justify" : t.align
+            _.value === !0 ? "left" : Q.value === !0 ? "justify" : t.align
           }`
       ),
       we = f(
         () =>
           `q-tabs row no-wrap items-center q-tabs--${
-            R.value === !0 ? "" : "not-"
+            _.value === !0 ? "" : "not-"
           }scrollable q-tabs--${
             t.vertical === !0 ? "vertical" : "horizontal"
           } q-tabs__arrows--${
@@ -311,7 +311,7 @@ var nt = Ve({
           (t.contentClass !== void 0 ? ` ${t.contentClass}` : "") +
           (l.platform.is.mobile === !0 ? " scroll" : "")
       ),
-      V = f(() =>
+      K = f(() =>
         t.vertical === !0
           ? {
               container: "height",
@@ -324,9 +324,9 @@ var nt = Ve({
               scroll: "scrollWidth",
             }
       ),
-      K = f(() => t.vertical !== !0 && l.lang.rtl === !0),
-      G = f(() => Ue === !1 && K.value === !0);
-    D(K, P),
+      V = f(() => t.vertical !== !0 && l.lang.rtl === !0),
+      G = f(() => Ne === !1 && V.value === !0);
+    D(V, P),
       D(
         () => t.modelValue,
         (e) => {
@@ -346,28 +346,28 @@ var nt = Ve({
       C.value !== e &&
         (n !== !0 &&
           t["onUpdate:modelValue"] !== void 0 &&
-          _("update:modelValue", e),
+          R("update:modelValue", e),
         (a === !0 || t["onUpdate:modelValue"] === void 0) &&
           (ye(C.value, e), (C.value = e)));
     }
     function E() {
-      H(() => {
+      z(() => {
         ee({ width: L.value.offsetWidth, height: L.value.offsetHeight });
       });
     }
     function ee(e) {
-      if (V.value === void 0 || g.value === null) return;
-      const a = e[V.value.container],
+      if (K.value === void 0 || g.value === null) return;
+      const a = e[K.value.container],
         n = Math.min(
-          g.value[V.value.scroll],
+          g.value[K.value.scroll],
           Array.prototype.reduce.call(
             g.value.children,
-            (s, i) => s + (i[V.value.content] || 0),
+            (s, i) => s + (i[K.value.content] || 0),
             0
           )
         ),
         u = a > 0 && n > a;
-      (R.value = u),
+      (_.value = u),
         u === !0 && M(P),
         (Q.value = a < parseInt(t.breakpoint, 10));
     }
@@ -378,7 +378,7 @@ var nt = Ve({
       if (n && u) {
         const s = n.tabIndicatorRef.value,
           i = u.tabIndicatorRef.value;
-        clearTimeout(S),
+        clearTimeout(k),
           (s.style.transition = "none"),
           (s.style.transform = "none"),
           (i.style.transition = "none"),
@@ -394,14 +394,14 @@ var nt = Ve({
                 d.width ? o.width / d.width : 1
               },1,1)`),
           F(() => {
-            S = setTimeout(() => {
+            k = setTimeout(() => {
               (i.style.transition =
                 "transform .25s cubic-bezier(.4, 0, .2, 1)"),
                 (i.style.transform = "none");
             }, 70);
           });
       }
-      u && R.value === !0 && B(u.rootRef.value);
+      u && _.value === !0 && B(u.rootRef.value);
     }
     function B(e) {
       const {
@@ -429,7 +429,7 @@ var nt = Ve({
       if (e !== null) {
         const a = e.getBoundingClientRect(),
           n = t.vertical === !0 ? e.scrollTop : Math.abs(e.scrollLeft);
-        K.value === !0
+        V.value === !0
           ? (($.value = Math.ceil(n + a.width) < e.scrollWidth - 1),
             (A.value = n > 0))
           : (($.value = n > 0),
@@ -442,7 +442,7 @@ var nt = Ve({
     function ae(e) {
       y(),
         (j = setInterval(() => {
-          Re(e) === !0 && y();
+          _e(e) === !0 && y();
         }, 5));
     }
     function ne() {
@@ -468,14 +468,14 @@ var nt = Ve({
         i = e === (t.vertical === !0 ? 40 : 39),
         o = s === !0 ? -1 : i === !0 ? 1 : void 0;
       if (o !== void 0) {
-        const d = K.value === !0 ? -1 : 1,
+        const d = V.value === !0 ? -1 : 1,
           q = n.indexOf(a) + o * d;
         return (
           q >= 0 && q < u && (B(n[q]), n[q].focus({ preventScroll: !0 })), !0
         );
       }
     }
-    const _e = f(() =>
+    const Re = f(() =>
       G.value === !0
         ? {
             get: (e) => Math.abs(e.scrollLeft),
@@ -497,9 +497,9 @@ var nt = Ve({
             },
           }
     );
-    function Re(e) {
+    function _e(e) {
       const a = g.value,
-        { get: n, set: u } = _e.value;
+        { get: n, set: u } = Re.value;
       let s = !1,
         i = n(a);
       const o = e < i ? -1 : 1;
@@ -518,7 +518,7 @@ var nt = Ve({
       for (const n in e) if (e[n] !== a[n]) return !1;
       return !0;
     }
-    function Se() {
+    function ke() {
       let e = null,
         a = { matchedLen: 0, queryDiff: 9999, hrefLen: 0 };
       const n = c.filter(
@@ -547,27 +547,27 @@ var nt = Ve({
           break;
         }
         if ((q !== "" && q !== u) || (Y !== 0 && le(J, s) === !1)) continue;
-        const k = {
+        const S = {
           matchedLen: Ae.length,
           queryDiff: i - Y,
           hrefLen: Be.length - q.length,
         };
-        if (k.matchedLen > a.matchedLen) {
-          (e = o.name.value), (a = k);
+        if (S.matchedLen > a.matchedLen) {
+          (e = o.name.value), (a = S);
           continue;
-        } else if (k.matchedLen !== a.matchedLen) continue;
-        if (k.queryDiff < a.queryDiff) (e = o.name.value), (a = k);
-        else if (k.queryDiff !== a.queryDiff) continue;
-        k.hrefLen > a.hrefLen && ((e = o.name.value), (a = k));
+        } else if (S.matchedLen !== a.matchedLen) continue;
+        if (S.queryDiff < a.queryDiff) (e = o.name.value), (a = S);
+        else if (S.queryDiff !== a.queryDiff) continue;
+        S.hrefLen > a.hrefLen && ((e = o.name.value), (a = S));
       }
       (e === null &&
         c.some((o) => o.routeData === void 0 && o.name.value === C.value) ===
           !0) ||
         X({ name: e, setCurrent: !0 });
     }
-    function ke(e) {
+    function Se(e) {
       if (
-        (N(),
+        (H(),
         m.value !== !0 &&
           L.value !== null &&
           e.target &&
@@ -576,7 +576,7 @@ var nt = Ve({
         const a = e.target.closest(".q-tab");
         a &&
           L.value.contains(a) === !0 &&
-          ((m.value = !0), R.value === !0 && B(a));
+          ((m.value = !0), _.value === !0 && B(a));
       }
     }
     function Le() {
@@ -585,7 +585,7 @@ var nt = Ve({
       }, 30);
     }
     function O() {
-      ie.avoidRouteWatcher === !1 ? I(Se) : U();
+      ie.avoidRouteWatcher === !1 ? I(ke) : N();
     }
     function re() {
       if (b === void 0) {
@@ -601,7 +601,7 @@ var nt = Ve({
         E(),
         e.routeData === void 0 || v.$route === void 0
           ? I(() => {
-              if (R.value === !0) {
+              if (_.value === !0) {
                 const a = C.value,
                   n =
                     a != null && a !== ""
@@ -632,14 +632,14 @@ var nt = Ve({
       onKbdNavigate: qe,
       avoidRouteWatcher: !1,
     };
-    He(be, ie);
+    ze(be, ie);
     function ue() {
-      clearTimeout(S), y(), b !== void 0 && b();
+      clearTimeout(k), y(), b !== void 0 && b();
     }
     let se;
     return (
       de(ue),
-      Ke(() => {
+      Ve(() => {
         (se = b !== void 0), ue();
       }),
       Oe(() => {
@@ -647,13 +647,13 @@ var nt = Ve({
       }),
       () => {
         const e = [
-          h(Ne, { onResize: ee }),
-          h("div", { ref: g, class: Ce.value, onScroll: P }, ze(x.default)),
+          h(He, { onResize: ee }),
+          h("div", { ref: g, class: Ce.value, onScroll: P }, Ue(x.default)),
         ];
         return (
           r.value === !0 &&
             e.push(
-              h(z, {
+              h(U, {
                 class:
                   "q-tabs__arrow q-tabs__arrow--left absolute q-tab__icon" +
                   ($.value === !0 ? "" : " q-tabs__arrow--faded"),
@@ -666,7 +666,7 @@ var nt = Ve({
                 onMouseleavePassive: y,
                 onTouchendPassive: y,
               }),
-              h(z, {
+              h(U, {
                 class:
                   "q-tabs__arrow q-tabs__arrow--right absolute q-tab__icon" +
                   (A.value === !0 ? "" : " q-tabs__arrow--faded"),
@@ -686,7 +686,7 @@ var nt = Ve({
               ref: L,
               class: we.value,
               role: "tablist",
-              onFocusin: ke,
+              onFocusin: Se,
               onFocusout: Le,
             },
             e

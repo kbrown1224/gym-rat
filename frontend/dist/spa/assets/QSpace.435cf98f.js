@@ -1,4 +1,4 @@
-import { h as e, d as a } from "./index.099d1cbc.js";
+import { h as e, b as a } from "./index.b5dc3681.js";
 const p = e("div", { class: "q-space" });
 var c = a({
   name: "QSpace",

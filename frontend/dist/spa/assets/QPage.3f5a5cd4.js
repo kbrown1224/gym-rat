@@ -1,14 +1,14 @@
 import {
-  d as g,
+  b as g,
   e as t,
-  f as r,
+  d as r,
   h,
-  g as p,
+  f as p,
   i as s,
-  j as d,
+  g as d,
   l as f,
-  k as y,
-} from "./index.099d1cbc.js";
+  j as y,
+} from "./index.b5dc3681.js";
 var C = g({
   name: "QPage",
   props: { padding: Boolean, styleFn: Function },

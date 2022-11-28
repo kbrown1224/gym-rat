@@ -1,14 +1,15 @@
 import {
-  _ as h,
-  y as c,
-  f as w,
-  n as y,
-  c as b,
+  _ as v,
+  x as c,
+  I as h,
+  d as w,
+  m as b,
+  c as x,
   w as a,
-  J as Q,
-  K as x,
+  J as y,
+  K as Q,
   o as L,
-  G as r,
+  F as d,
   a as e,
   L as u,
   M as p,
@@ -16,53 +17,56 @@ import {
   Q as S,
   O as V,
   P as I,
-  H as C,
-  I as P,
-} from "./index.099d1cbc.js";
-import { Q as q } from "./QPage.a405a503.js";
-import { u as B } from "./auth-store.52914b43.js";
-const k = (s) => (C("data-v-3b29af85"), (s = s()), P(), s),
-  N = { class: "row" },
-  M = { class: "col-4 offset-4" },
-  U = k(() => r("div", { class: "text-h3" }, "Login", -1)),
-  A = {
+  G as C,
+  H as P,
+} from "./index.b5dc3681.js";
+import { Q as q } from "./QPage.3f5a5cd4.js";
+const B = (s) => (C("data-v-b9fef00c"), (s = s()), P(), s),
+  k = { class: "row" },
+  N = { class: "col-4 offset-4" },
+  M = B(() => d("div", { class: "text-h3" }, "Login", -1)),
+  U = {
     __name: "LoginPage",
     setup(s) {
-      const m = Q(),
+      const m = y(),
         o = c(""),
         l = c(""),
-        d = x(),
-        i = B(),
+        r = Q(),
+        i = h(),
         g = w(() => o.value === "" || l.value === "");
       function f() {
         i.login(o.value, l.value)
-          ? d.push({ name: "home" })
-          : m.notify({
+          .then(() => {
+            r.push({ name: "home" });
+          })
+          .catch(() => {
+            m.notify({
               color: "negative",
               textColor: "white",
               icon: "warning",
               message: "Something went wrong",
             });
+          });
       }
       return (
-        y(() => {
-          i.isLoggedIn && d.push({ name: "home" });
+        b(() => {
+          i.isLoggedIn && r.push({ name: "home" });
         }),
-        (v, t) => (
+        (A, t) => (
           L(),
-          b(
+          x(
             q,
             { class: "q-pa-xl gradient-bg" },
             {
               default: a(() => [
-                r("div", N, [
-                  r("div", M, [
+                d("div", k, [
+                  d("div", N, [
                     e(
                       I,
                       { class: "glassy" },
                       {
                         default: a(() => [
-                          e(u, null, { default: a(() => [U]), _: 1 }),
+                          e(u, null, { default: a(() => [M]), _: 1 }),
                           e(p, { class: "q-my-lg" }),
                           e(u, null, {
                             default: a(() => [
@@ -128,5 +132,5 @@ const k = (s) => (C("data-v-3b29af85"), (s = s()), P(), s),
       );
     },
   };
-var J = h(A, [["__scopeId", "data-v-3b29af85"]]);
-export { J as default };
+var G = v(U, [["__scopeId", "data-v-b9fef00c"]]);
+export { G as default };

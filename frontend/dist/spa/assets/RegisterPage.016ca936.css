@@ -1,4 +1,4 @@
-.glassy[data-v-d54edf20] {
+.glassy[data-v-3181710e] {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px #1f26875e;
   backdrop-filter: blur(7.5px);
@@ -6,7 +6,7 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.gradient-bg[data-v-d54edf20] {
+.gradient-bg[data-v-3181710e] {
   background: rgb(48, 71, 94);
   background: linear-gradient(
     45deg,
@@ -15,7 +15,7 @@
     rgba(48, 71, 94, 1) 100%
   );
 }
-.page-break[data-v-d54edf20] {
+.page-break[data-v-3181710e] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

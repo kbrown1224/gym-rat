@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from sqlmodel import SQLModel
 
 
-def camelize(value: str) -> str:
+def snake_to_camel(value: str) -> str:
     """Snake case to camel case"""
 
     strings = value.split("_")
@@ -13,11 +13,11 @@ def camelize(value: str) -> str:
 
 class SQLModelBase(SQLModel):
     class Config:
-        alias_generator = camelize
+        alias_generator = snake_to_camel
         allow_population_by_field_name = True
 
 
 class PydanticBaseModel(BaseModel):
     class Config:
-        alias_generator = camelize
+        alias_generator = snake_to_camel
         allow_population_by_field_name = True

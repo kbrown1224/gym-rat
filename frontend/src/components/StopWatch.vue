@@ -16,6 +16,9 @@ export default defineComponent({
     };
   },
   expose: ["start", "stop", "pause", "time"],
+  mounted() {
+    this.start();
+  },
   methods: {
     start() {
       if (this.isRunning) throw new Error("Stopwatch has already started.");
@@ -46,8 +49,7 @@ export default defineComponent({
       const hours = pad0(times[0], 2);
       const minutes = pad0(times[1], 2);
       const seconds = pad0(times[2], 2);
-      const milliseconds = pad0(Math.trunc(times[3] % 100), 2);
-      return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+      return `${hours}:${minutes}:${seconds}`;
 
       function pad0(value, count) {
         let result = value.toString();

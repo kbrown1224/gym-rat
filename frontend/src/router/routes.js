@@ -48,6 +48,30 @@ const routes = [
   },
 
   {
+    path: "/calendar",
+    component: () => import("src/layouts/NavTabLayout.vue"),
+    children: [
+      {
+        name: "calendar",
+        path: "",
+        component: () => import("src/pages/CalendarPage.vue"),
+      },
+    ],
+  },
+
+  {
+    path: "/analysis",
+    component: () => import("src/layouts/NavTabLayout.vue"),
+    children: [
+      {
+        name: "analysis",
+        path: "",
+        component: () => import("src/pages/AnalysisPage.vue"),
+      },
+    ],
+  },
+
+  {
     path: "/workout/:muscleGroupId",
     component: () => import("src/layouts/NavLayout.vue"),
     children: [
