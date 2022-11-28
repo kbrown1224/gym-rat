@@ -35,7 +35,8 @@ def create_app(dev: bool = False):
         app_.mount(
             "/",
             StaticFiles(
-                directory="/Users/kip/Desktop/Projects/gym-rat/frontend/dist/spa"
+                # directory="/Users/kip/Desktop/Projects/gym-rat/frontend/dist/spa"
+                directory=settings.ui.DIST_DIR
             ),
             name="ui_root",
         )

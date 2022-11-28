@@ -65,3 +65,7 @@ def start(dev: bool = False):
 @app.command()
 def other():
     print("other")
+
+
+if __name__ == "__main__":
+    typer.run(app)
