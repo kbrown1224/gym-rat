@@ -1,9 +1,9 @@
 #! /usr/bin/env sh
 set -e
 
-DEFAULT_MODULE_NAME=backend.app.main:create_app
+DEFAULT_MODULE_NAME=backend.app.main
 MODULE_NAME=${MODULE_NAME:-$DEFAULT_MODULE_NAME}
-VARIABLE_NAME=${VARIABLE_NAME:-app}
+VARIABLE_NAME=${VARIABLE_NAME:-create_app}
 export APP_MODULE=${APP_MODULE:-"$MODULE_NAME:$VARIABLE_NAME"}
 
 DEFAULT_GUNICORN_CONF=/gunicorn_conf.py
