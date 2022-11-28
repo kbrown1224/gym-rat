@@ -1,0 +1,10 @@
+.center {
+  width: 200px;
+  border: 1px solid #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glowing-border {
+  box-shadow: 0 0 30px #42b883;
+}
