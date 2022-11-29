@@ -19,15 +19,13 @@ WORKDIR /app
 RUN poetry export --without-hashes --no-ansi -f requirements.txt -o requirements.txt
 RUN pip install setuptools
 RUN pip install -r requirements.txt
-RUN pip install gunicorn==20.1.0
 
 COPY . .
-COPY ./start.sh /start.sh
-RUN chmod +x /start.sh
-COPY ./gunicorn_conf.py /gunicorn_conf.py
+COPY ./start.py /start.py
+RUN chmod +x /start.py
 
 ENV PYTHONPATH=/app
 
-EXPOSE 85
+EXPOSE 8000
 
 CMD ["/start.sh"]
