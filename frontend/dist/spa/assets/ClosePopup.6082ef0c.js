@@ -7,7 +7,7 @@ import {
   b7 as d,
   b8 as u,
   ab as m,
-} from "./index.195637e2.js";
+} from "./index.929cc5a7.js";
 const f = [
   t("rect", { x: "0", y: "0", width: " 100", height: "100", fill: "none" }),
   t("g", { transform: "translate(25 25)" }, [

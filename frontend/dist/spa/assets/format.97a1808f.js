@@ -1,4 +1,4 @@
-import { b1 as l } from "./index.195637e2.js";
+import { b1 as l } from "./index.929cc5a7.js";
 function r() {
   if (window.getSelection !== void 0) {
     const t = window.getSelection();

@@ -8,7 +8,7 @@ import {
   ba as ut,
   h as Hi,
   bb as Ke,
-} from "./index.195637e2.js";
+} from "./index.929cc5a7.js";
 /*!
  * Chart.js v3.9.1
  * https://www.chartjs.org

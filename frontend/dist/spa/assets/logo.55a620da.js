@@ -11,8 +11,8 @@ import {
   u as T,
   g as O,
   x as $,
-} from "./index.195637e2.js";
-import { Q as k } from "./QResizeObserver.581b6f70.js";
+} from "./index.929cc5a7.js";
+import { Q as k } from "./QResizeObserver.4830e9d7.js";
 var L = b({
     name: "QToolbarTitle",
     props: { shrink: Boolean },
