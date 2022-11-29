@@ -9,8 +9,8 @@ import {
   Q as o,
   J as n,
   K as _,
-} from "./index.929cc5a7.js";
-import { Q as p } from "./QPage.2fadebee.js";
+} from "./index.3262b3e1.js";
+import { Q as p } from "./QPage.67806e81.js";
 var g = "/assets/barbel.6079ba74.svg";
 const u = l({ name: "LandigPage" }),
   t = (a) => (n("data-v-1d0de50d"), (a = a()), _(), a),

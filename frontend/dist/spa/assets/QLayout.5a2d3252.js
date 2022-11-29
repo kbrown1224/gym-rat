@@ -23,8 +23,8 @@ import {
   a as x,
   G as J,
   H as X,
-} from "./index.929cc5a7.js";
-import { Q as H } from "./QResizeObserver.4830e9d7.js";
+} from "./index.3262b3e1.js";
+import { Q as H } from "./QResizeObserver.73d9f52c.js";
 var oe = P({
   name: "QPageContainer",
   setup(e, { slots: p }) {

@@ -17,12 +17,12 @@ import {
   I as c,
   a3 as k,
   S as w,
-} from "./index.929cc5a7.js";
-import { Q as L, a as R, b as N, _ as C } from "./logo.55a620da.js";
-import { Q as S } from "./QSpace.be084b7b.js";
-import { u as A, a as B, b as P, Q as $ } from "./QTabs.a3e5ba5c.js";
-import { Q as D, a as H } from "./QLayout.f06567d0.js";
-import "./QResizeObserver.4830e9d7.js";
+} from "./index.3262b3e1.js";
+import { Q as L, a as R, b as N, _ as C } from "./logo.9c1d7646.js";
+import { Q as S } from "./QSpace.4b59fa38.js";
+import { u as A, a as B, b as P, Q as $ } from "./QTabs.136abc1a.js";
+import { Q as D, a as H } from "./QLayout.5a2d3252.js";
+import "./QResizeObserver.73d9f52c.js";
 import "./rtl.b51694b1.js";
 var u = d({
   name: "QRouteTab",

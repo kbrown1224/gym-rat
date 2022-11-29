@@ -13,7 +13,7 @@ import {
   h as i,
   T as Qt,
   i as zn,
-} from "./index.929cc5a7.js";
+} from "./index.3262b3e1.js";
 /*!
  * @quasar/quasar-ui-qcalendar v4.0.0-beta.15
  * (c) 2022 Jeff Galbraith <jeff@quasar.dev>

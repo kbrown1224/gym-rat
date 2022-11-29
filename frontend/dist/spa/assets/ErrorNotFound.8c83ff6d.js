@@ -6,7 +6,7 @@ import {
   p as a,
   m as n,
   Q as r,
-} from "./index.929cc5a7.js";
+} from "./index.3262b3e1.js";
 const c = o({ name: "ErrorNotFound" }),
   l = {
     class: "fullscreen bg-blue text-white text-center q-pa-md flex flex-center",

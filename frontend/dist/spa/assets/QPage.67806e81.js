@@ -8,7 +8,7 @@ import {
   g as d,
   x as y,
   y as f,
-} from "./index.929cc5a7.js";
+} from "./index.3262b3e1.js";
 var C = g({
   name: "QPage",
   props: { padding: Boolean, styleFn: Function },

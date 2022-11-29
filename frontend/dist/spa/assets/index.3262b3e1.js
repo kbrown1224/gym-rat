@@ -6251,7 +6251,7 @@ st.isAxiosError = Im;
 Ii.exports = st;
 Ii.exports.default = st;
 var _u = Ii.exports;
-const wt = _u.create({ baseURL: "http://192.168.4.104:8000 " });
+const wt = _u.create({ baseURL: "http://192.168.4.104:8000" });
 wt.defaults.headers.common.Accept = "application/json";
 var Dm = ({ app: e }) => {
     (e.config.globalProperties.$axios = _u),
@@ -7879,11 +7879,11 @@ const og = [
       path: "/",
       component: () =>
         Oe(
-          () => import("./BareLayout.21a4b82d.js"),
+          () => import("./BareLayout.a659be04.js"),
           [
-            "assets/BareLayout.21a4b82d.js",
-            "assets/QLayout.f06567d0.js",
-            "assets/QResizeObserver.4830e9d7.js",
+            "assets/BareLayout.a659be04.js",
+            "assets/QLayout.5a2d3252.js",
+            "assets/QResizeObserver.73d9f52c.js",
           ]
         ),
       children: [
@@ -7892,11 +7892,11 @@ const og = [
           path: "",
           component: () =>
             Oe(
-              () => import("./LandingPage.e06ad705.js"),
+              () => import("./LandingPage.59b77f2c.js"),
               [
-                "assets/LandingPage.e06ad705.js",
+                "assets/LandingPage.59b77f2c.js",
                 "assets/LandingPage.4a295138.css",
-                "assets/QPage.2fadebee.js",
+                "assets/QPage.67806e81.js",
               ]
             ),
         },
@@ -7906,11 +7906,11 @@ const og = [
       path: "/login",
       component: () =>
         Oe(
-          () => import("./BareLayout.21a4b82d.js"),
+          () => import("./BareLayout.a659be04.js"),
           [
-            "assets/BareLayout.21a4b82d.js",
-            "assets/QLayout.f06567d0.js",
-            "assets/QResizeObserver.4830e9d7.js",
+            "assets/BareLayout.a659be04.js",
+            "assets/QLayout.5a2d3252.js",
+            "assets/QResizeObserver.73d9f52c.js",
           ]
         ),
       children: [
@@ -7919,11 +7919,11 @@ const og = [
           path: "",
           component: () =>
             Oe(
-              () => import("./LoginPage.37d7f161.js"),
+              () => import("./LoginPage.b365b3bb.js"),
               [
-                "assets/LoginPage.37d7f161.js",
-                "assets/AnalysisPage.e8645183.css",
-                "assets/QPage.2fadebee.js",
+                "assets/LoginPage.b365b3bb.js",
+                "assets/HomePage.c35f995c.css",
+                "assets/QPage.67806e81.js",
               ]
             ),
         },
@@ -7933,11 +7933,11 @@ const og = [
       path: "/register",
       component: () =>
         Oe(
-          () => import("./BareLayout.21a4b82d.js"),
+          () => import("./BareLayout.a659be04.js"),
           [
-            "assets/BareLayout.21a4b82d.js",
-            "assets/QLayout.f06567d0.js",
-            "assets/QResizeObserver.4830e9d7.js",
+            "assets/BareLayout.a659be04.js",
+            "assets/QLayout.5a2d3252.js",
+            "assets/QResizeObserver.73d9f52c.js",
           ]
         ),
       children: [
@@ -7946,11 +7946,11 @@ const og = [
           path: "",
           component: () =>
             Oe(
-              () => import("./RegisterPage.87f97a74.js"),
+              () => import("./RegisterPage.782d94a5.js"),
               [
-                "assets/RegisterPage.87f97a74.js",
+                "assets/RegisterPage.782d94a5.js",
                 "assets/RegisterPage.016ca936.css",
-                "assets/QPage.2fadebee.js",
+                "assets/QPage.67806e81.js",
               ]
             ),
         },
@@ -7960,15 +7960,15 @@ const og = [
       path: "/home",
       component: () =>
         Oe(
-          () => import("./NavTabLayout.2cfd966d.js"),
+          () => import("./NavTabLayout.e5528638.js"),
           [
-            "assets/NavTabLayout.2cfd966d.js",
-            "assets/logo.55a620da.js",
-            "assets/QResizeObserver.4830e9d7.js",
-            "assets/QSpace.be084b7b.js",
-            "assets/QTabs.a3e5ba5c.js",
+            "assets/NavTabLayout.e5528638.js",
+            "assets/logo.9c1d7646.js",
+            "assets/QResizeObserver.73d9f52c.js",
+            "assets/QSpace.4b59fa38.js",
+            "assets/QTabs.136abc1a.js",
             "assets/rtl.b51694b1.js",
-            "assets/QLayout.f06567d0.js",
+            "assets/QLayout.5a2d3252.js",
           ]
         ),
       children: [
@@ -7977,13 +7977,13 @@ const og = [
           path: "",
           component: () =>
             Oe(
-              () => import("./HomePage.37819af0.js"),
+              () => import("./HomePage.89236b72.js"),
               [
-                "assets/HomePage.37819af0.js",
-                "assets/AnalysisPage.e8645183.css",
-                "assets/QPage.2fadebee.js",
+                "assets/HomePage.89236b72.js",
+                "assets/HomePage.c35f995c.css",
+                "assets/QPage.67806e81.js",
                 "assets/rtl.b51694b1.js",
-                "assets/format.97a1808f.js",
+                "assets/format.7874108f.js",
               ]
             ),
         },
@@ -7993,15 +7993,15 @@ const og = [
       path: "/calendar",
       component: () =>
         Oe(
-          () => import("./NavTabLayout.2cfd966d.js"),
+          () => import("./NavTabLayout.e5528638.js"),
           [
-            "assets/NavTabLayout.2cfd966d.js",
-            "assets/logo.55a620da.js",
-            "assets/QResizeObserver.4830e9d7.js",
-            "assets/QSpace.be084b7b.js",
-            "assets/QTabs.a3e5ba5c.js",
+            "assets/NavTabLayout.e5528638.js",
+            "assets/logo.9c1d7646.js",
+            "assets/QResizeObserver.73d9f52c.js",
+            "assets/QSpace.4b59fa38.js",
+            "assets/QTabs.136abc1a.js",
             "assets/rtl.b51694b1.js",
-            "assets/QLayout.f06567d0.js",
+            "assets/QLayout.5a2d3252.js",
           ]
         ),
       children: [
@@ -8010,12 +8010,12 @@ const og = [
           path: "",
           component: () =>
             Oe(
-              () => import("./CalendarPage.d439d646.js"),
+              () => import("./CalendarPage.5a083653.js"),
               [
-                "assets/CalendarPage.d439d646.js",
+                "assets/CalendarPage.5a083653.js",
                 "assets/CalendarPage.ed6da044.css",
-                "assets/QPage.2fadebee.js",
-                "assets/ClosePopup.6082ef0c.js",
+                "assets/QPage.67806e81.js",
+                "assets/ClosePopup.b9fb2219.js",
               ]
             ),
         },
@@ -8025,15 +8025,15 @@ const og = [
       path: "/analysis",
       component: () =>
         Oe(
-          () => import("./NavTabLayout.2cfd966d.js"),
+          () => import("./NavTabLayout.e5528638.js"),
           [
-            "assets/NavTabLayout.2cfd966d.js",
-            "assets/logo.55a620da.js",
-            "assets/QResizeObserver.4830e9d7.js",
-            "assets/QSpace.be084b7b.js",
-            "assets/QTabs.a3e5ba5c.js",
+            "assets/NavTabLayout.e5528638.js",
+            "assets/logo.9c1d7646.js",
+            "assets/QResizeObserver.73d9f52c.js",
+            "assets/QSpace.4b59fa38.js",
+            "assets/QTabs.136abc1a.js",
             "assets/rtl.b51694b1.js",
-            "assets/QLayout.f06567d0.js",
+            "assets/QLayout.5a2d3252.js",
           ]
         ),
       children: [
@@ -8042,12 +8042,12 @@ const og = [
           path: "",
           component: () =>
             Oe(
-              () => import("./AnalysisPage.4b4a6cbe.js"),
+              () => import("./AnalysisPage.a3e79fdf.js"),
               [
-                "assets/AnalysisPage.4b4a6cbe.js",
-                "assets/AnalysisPage.e8645183.css",
-                "assets/QPage.2fadebee.js",
-                "assets/index.ace98c57.js",
+                "assets/AnalysisPage.a3e79fdf.js",
+                "assets/HomePage.c35f995c.css",
+                "assets/QPage.67806e81.js",
+                "assets/index.301b40db.js",
               ]
             ),
         },
@@ -8057,13 +8057,13 @@ const og = [
       path: "/workout/:muscleGroupId",
       component: () =>
         Oe(
-          () => import("./NavLayout.daca0fa1.js"),
+          () => import("./NavLayout.6c3a9350.js"),
           [
-            "assets/NavLayout.daca0fa1.js",
-            "assets/logo.55a620da.js",
-            "assets/QResizeObserver.4830e9d7.js",
-            "assets/QSpace.be084b7b.js",
-            "assets/QLayout.f06567d0.js",
+            "assets/NavLayout.6c3a9350.js",
+            "assets/logo.9c1d7646.js",
+            "assets/QResizeObserver.73d9f52c.js",
+            "assets/QSpace.4b59fa38.js",
+            "assets/QLayout.5a2d3252.js",
           ]
         ),
       children: [
@@ -8072,18 +8072,18 @@ const og = [
           path: "",
           component: () =>
             Oe(
-              () => import("./WorkoutPage.2638ef9b.js"),
+              () => import("./WorkoutPage.7081cca2.js"),
               [
-                "assets/WorkoutPage.2638ef9b.js",
+                "assets/WorkoutPage.7081cca2.js",
                 "assets/WorkoutPage.5988ae5c.css",
-                "assets/QTabs.a3e5ba5c.js",
-                "assets/QResizeObserver.4830e9d7.js",
+                "assets/QTabs.136abc1a.js",
+                "assets/QResizeObserver.73d9f52c.js",
                 "assets/rtl.b51694b1.js",
-                "assets/format.97a1808f.js",
-                "assets/QSpace.be084b7b.js",
-                "assets/QPage.2fadebee.js",
-                "assets/ClosePopup.6082ef0c.js",
-                "assets/index.ace98c57.js",
+                "assets/format.7874108f.js",
+                "assets/QSpace.4b59fa38.js",
+                "assets/QPage.67806e81.js",
+                "assets/ClosePopup.b9fb2219.js",
+                "assets/index.301b40db.js",
               ]
             ),
         },
@@ -8091,7 +8091,7 @@ const og = [
     },
     {
       path: "/:catchAll(.*)*",
-      component: () => Oe(() => import("./ErrorNotFound.dea4ed9e.js"), []),
+      component: () => Oe(() => import("./ErrorNotFound.8c83ff6d.js"), []),
     },
   ],
   Sr = ng({
@@ -12727,7 +12727,7 @@ ig(Wl, Xv).then((e) => {
         }),
       void 0
     ),
-    Oe(() => import("./register.1db88e07.js"), []),
+    Oe(() => import("./register.30c73d6e.js"), []),
   ]).then((r) => {
     const o = n(r).filter((i) => typeof i == "function");
     Zv(e, o);
