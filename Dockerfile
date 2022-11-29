@@ -28,4 +28,4 @@ ENV PYTHONPATH=/app
 
 EXPOSE 8000
 
-CMD ["/start.sh"]
+CMD ["/start.py"]
