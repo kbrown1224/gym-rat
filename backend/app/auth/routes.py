@@ -3,7 +3,6 @@ from fastapi.security import OAuth2PasswordRequestForm
 from loguru import logger
 from sqlalchemy.exc import IntegrityError, NoResultFound
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlmodel import Session
 
 from backend.app.auth.dependencies import get_current_user
 from backend.db.session import get_async_session
@@ -25,7 +24,9 @@ router = APIRouter(tags=["Auth"], prefix="/auth")
     response_description="Returns the created user object after successful creation",
     summary="Register a new user to the Gym Rat application",
 )
-async def register(user: UserCreate, session: Session = Depends(get_async_session)):
+async def register(
+    user: UserCreate, session: AsyncSession = Depends(get_async_session)
+):
     db_user = User.from_orm(
         user, update={"hashed_password": get_password_hash(user.password)}
     )

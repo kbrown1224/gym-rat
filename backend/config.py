@@ -1,9 +1,12 @@
 from functools import lru_cache
+from os import getenv
 from pathlib import Path
 
+from dotenv import load_dotenv
 from pydantic import BaseSettings
 
 root = Path(__file__).parent.parent
+load_dotenv(root.joinpath(".env"))
 
 
 class UISettings(BaseSettings):
@@ -11,28 +14,24 @@ class UISettings(BaseSettings):
 
 
 class DocumentationSettings(BaseSettings):
-    SHOW: bool = True
-    VERSION: str = "0.1.0"
+    SHOW: bool = getenv("DOCS_SHOW", False)
+    VERSION: str = getenv("DOCS_VERSION")
     TOS_PATH: str | None = None
 
 
 class ServerSettings(BaseSettings):
-    HOST: str = "0.0.0.0"
-    PORT: int = 8000
+    HOST: str = getenv("SERVER_HOST", "127.0.0.1")
+    PORT: int = getenv("SERVER_PORT", 8000)
 
 
 class CookieSettings(BaseSettings):
-    SECRET_KEY: str = "MYSECRET"
-    ALGO: str = "HS256"
+    SECRET_KEY: str = getenv("COOKIE_SECRET_KEY")
+    ALGO: str = getenv("COOKIE_ALGO")
 
 
 class DBSettings(BaseSettings):
-    SYNC_DB_URI: str = (
-        "postgresql+pg8000://svc_gym_rat:g3tSw0l3@192.168.4.37:5432/thegymrat"
-    )
-    ASYNC_DB_URI: str = (
-        "postgresql+asyncpg://svc_gym_rat:g3tSw0l3@192.168.4.37:5432/thegymrat"
-    )
+    SYNC_DB_URI: str = getenv("DB_SYNC_URI")
+    ASYNC_DB_URI: str = getenv("DB_ASYNC_URI")
 
 
 class Settings(BaseSettings):

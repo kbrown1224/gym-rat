@@ -1,6 +1,7 @@
 import uuid
 from datetime import date
 
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import subqueryload
 from sqlmodel import Session, select
 
@@ -18,7 +19,7 @@ def search_workouts(
     start_date: date | None = None,
     end_date: date | None = None,
     workout_group_id: int | None = None,
-    session: Session,
+    session: AsyncSession,
     user: User
 ):
     query = select(Workout).where(Workout.user_id == user.id)
